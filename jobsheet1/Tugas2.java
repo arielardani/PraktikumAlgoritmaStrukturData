@@ -35,7 +35,7 @@ public class Tugas2 {
                         break;
                     case 0:
                         System.out.println("Program selesai.");
-                        break;
+                        return;
                     default:
                         System.out.println("Menu tidak valid!");
                 }
