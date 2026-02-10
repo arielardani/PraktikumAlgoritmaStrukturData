@@ -30,7 +30,7 @@ public class PraktikumPemilihan {
             }
         }
         nilaiAkhir = nTugas * 0.2 + nKuis * 0.2 + nUts * 0.3 + nUas * 0.3;
-        if (nilaiAkhir <= 110 && nilaiAkhir > 80) {
+        if (nilaiAkhir <= 100 && nilaiAkhir > 80) {
             grade = "A";
             statusLulus = "Lulus";
         } else if (nilaiAkhir <= 80 && nilaiAkhir > 73) {
