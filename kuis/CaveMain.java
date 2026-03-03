@@ -21,7 +21,7 @@ public class CaveMain {
             System.out.println("----------------------------");
         }
         while (true) {
-            System.out.print("pilih menu");
+            System.out.print("pilih menu: ");
             int key = sc.nextInt();
             sc.nextLine();
             switch (key) {
@@ -29,7 +29,7 @@ public class CaveMain {
                     tampilMenu();
                     break;
                 case 2:
-                    System.out.print("Pilih menu yang mau di tambah stock");
+                    System.out.print("Pilih nama menu yang mau di tambah stock: ");
                     String a = sc.nextLine();
                     boolean status=false;
                     int j=0;
@@ -53,7 +53,7 @@ public class CaveMain {
                     }
 
                 case 3:
-                    System.out.print("Pilih menu yang mau di ubah harga");
+                    System.out.print("Pilih nama menu yang mau di ubah harga: ");
                     String p = sc.nextLine();
                     boolean status1=false;
                     int o=0;
