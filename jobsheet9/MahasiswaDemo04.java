@@ -7,7 +7,7 @@ import java.util.Scanner;
 public class MahasiswaDemo04 {
     public static void main(String[] args) {
         int pilih;
-        int totalKumpul=0;
+        int totalKumpul = 0;
         Scanner scan = new Scanner(System.in);
         StackTugasMahasiswa04 stack = new StackTugasMahasiswa04(5);
         do {
@@ -42,6 +42,8 @@ public class MahasiswaDemo04 {
                         int nilai = scan.nextInt();
                         dinilai.tugasDinilai(nilai);
                         System.out.printf("Nilai Tugas %s adalah %d\n", dinilai.nama, nilai);
+                        String biner = stack.konversiDesimalKeBiner(nilai);
+                        System.out.println("Nilai Biner Tugas: " + biner);
                     }
                     break;
                 case 3:
@@ -65,15 +67,16 @@ public class MahasiswaDemo04 {
                     System.out.println("1. Termasuk yang sudah dinilai");
                     System.out.println("2. Tidak Termasuk yang sudah dinilai");
                     System.out.print("pilih: ");
-                    int opsi =scan.nextInt();
+                    int opsi = scan.nextInt();
                     switch (opsi) {
                         case 1:
-                    System.out.println("Total semua tugas Termasuk yang sudah dinilai adalah " + totalKumpul);  
+                            System.out.println("Total semua tugas Termasuk yang sudah dinilai adalah " + totalKumpul);
                             break;
                         case 2:
-                    System.out.println("Total semua tugas Tidak Termasuk yang sudah dinilai "+ (stack.top+1) );
+                            System.out
+                                    .println("Total semua tugas Tidak Termasuk yang sudah dinilai " + (stack.top + 1));
                             break;
-                    
+
                         default:
                             System.out.println("Pilihan tidak valid.");
                             break;
