@@ -55,6 +55,7 @@ public class StackTugasMahasiswa04 {
             return null;
         }
     }
+
     public Mahasiswa04 peekbwh() {
         if (!isEmpty()) {
             return stack[0];
@@ -70,17 +71,20 @@ public class StackTugasMahasiswa04 {
         }
         System.out.println("");
     }
-    public String konversiDesimalKeBiner(int nilai) {
-    StackKonversi04 stack = new StackKonversi04();
-    while (nilai > 0) {
-        int sisa = nilai % 2;
-        stack.push(sisa);
-        nilai = nilai / 2;
+
+    public String konversiDesimalKeBiner(int nilai // nilai yang akan di konversi ditaruh padaparameter
+
+    ) {
+        StackKonversi04 stack = new StackKonversi04(); // dilakukan instansi class StackKonversi04 menjadi objek stack
+        while (nilai !=0) { // looping hingga nilai menjadi 0
+            int sisa = nilai % 2; //nilai akan di modulus 2 dan hasil dari modulus masuk ke variabel sisa
+            stack.push(sisa);//variabel sisa akan masuk ke parameter dari method push
+            nilai = nilai / 2;//nilai akan dibagi 2 sehingga akan lanjut ke digit biner selanjutnya
+        }
+        String biner = new String();//inisialisasi objek biner
+        while (!stack.isEmpty()) {//melakukan pengecekan apakah stack tidak kosong
+            biner += stack.pop();//dilakukan pop pada array untuk di masukan ke dalam variable biner
+        }
+        return biner;// dilakukan return untuk mengembalikan nilai dari biner
     }
-    String biner = new String();
-    while (!stack.isEmpty()) {
-        biner += stack.pop();
-    }
-    return biner;
-}
 }
