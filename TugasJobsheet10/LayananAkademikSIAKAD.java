@@ -82,10 +82,11 @@ public class LayananAkademikSIAKAD {
                 case 10:
                     System.out.println("jumlah yang sudah melakukan proses krs :" + antrian.getJumlahKrs());
                     break;
+                case 11:
                     int a = antrian.getMaxKrs();
                     int b = antrian.getJumlahKrs();
-                    case 11:
-                    System.out.println("jumlah mahasiswa yang belum melakukan proses krs :"+(a-b));
+                    System.out.println("jumlah mahasiswa yang belum melakukan proses krs :" + (a - b));
+                    break;
                 case 0:
                     System.out.println("Terima kasih.");
                     break;
