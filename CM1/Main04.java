@@ -72,15 +72,30 @@ public class Main04 {
                 case 0:
                     return;
                 default:
+                    // System.out.println("input salah");
                     break;
             }
         }
     }
+    // static void Sorting(Peminjaman04 pinjam[]){
+    //     for (int i = 0; i < pinjam.length - 1; i++) {
+    //         int max = i;
+    //         for (int j = i + 1; j < pinjam.length; j++) {
+    //             if (pinjam[j].denda > pinjam[max].denda) {
+    //                 max = j;
+    //             }
+    //         }
+    //         Peminjaman04 temp = pinjam[i];
+    //         pinjam[i] = pinjam[max];
+    //         pinjam[max] = temp;
+    //     }
+    // }
+
     static void Sorting(Peminjaman04 pinjam[]){
         for (int i = 0; i < pinjam.length - 1; i++) {
             int max = i;
             for (int j = i + 1; j < pinjam.length; j++) {
-                if (pinjam[j].denda > pinjam[max].denda) {
+                if (pinjam[j].denda < pinjam[max].denda) {
                     max = j;
                 }
             }
@@ -89,6 +104,7 @@ public class Main04 {
             pinjam[max] = temp;
         }
     }
+
     static void search(Peminjaman04 pinjam[],Scanner sc){
 
         int jumlah=0;
